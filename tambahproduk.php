@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $filePath = "uploadproduk/" . $namafile;
 
     if (file_put_contents($filePath, $imageData)) {
-        require_once('connect.php');
+        require_once('koneksi.php');
 
         $sql = "INSERT INTO produk(idproduk, namaproduk, jumlah, harga, barcode) 
                 VALUES ('$idproduk','$namaproduk','$jumlah','$harga','$namafile')";

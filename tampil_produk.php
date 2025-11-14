@@ -1,15 +1,14 @@
 <?php
-require_once('connect.php');
-if (isset($_GET['id_produk'])) {
-    $idproduk = ($_GET['id_produk']);
-}
+require_once('koneksi.php');
+
+header('Content-Type: application/json');
+
+$query = mysqli_query($conn, "SELECT * FROM produk ORDER BY idproduk DESC");
 
 $result = array();
-$query = mysqli_query($conn, "SELECT *FROM produk ORDER BY idproduk DESC");
 
 while ($row = mysqli_fetch_assoc($query)) {
     $result[] = $row;
 }
 
-echo json_encode(array('result' => $result));
-?>
+echo json_encode(['result' => $result]);

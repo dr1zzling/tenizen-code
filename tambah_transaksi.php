@@ -12,7 +12,7 @@
     $kembalian = $_POST['kembalian'];
     $tanggaltransaksi = !empty($_POST['tanggaltransaksi']) ? $_POST['tanggaltransaksi'] : date("Y-m-d H:i:s");
     
-    require_once('connect.php');
+    require_once('koneksi.php');
 
     $checkStmt = $conn->prepare("SELECT idproduk FROM produk WHERE idproduk = ?");
     $checkStmt->bind_param("s", $idproduk);
