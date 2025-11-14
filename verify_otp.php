@@ -1,6 +1,6 @@
 <?php
     header("Content-Type: application/json");
-    include 'connect.php';
+    include 'koneksi.php';
 
     $email = $_POST['email'];
     $otp = $_POST['otp'];

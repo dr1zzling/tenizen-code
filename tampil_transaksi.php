@@ -1,5 +1,5 @@
 <?php 
-    require_once('connect.php');
+    require_once('koneksi.php');
 
     if (isset($_GET['id'])) {
         $id = $_GET['id'];

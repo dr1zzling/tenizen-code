@@ -1,5 +1,5 @@
 <?php
-include 'connect.php';
+include 'koneksi.php';
 
 if (isset($_GET['nis'])) {
     $nis = mysqli_real_escape_string($conn, $_GET['nis']);

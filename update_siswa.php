@@ -1,5 +1,5 @@
 <?php
-include 'connect.php';
+include 'koneksi.php';
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $nis = $_POST["nis"];
     $namasiswa = $_POST["namasiswa"];

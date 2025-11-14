@@ -1,5 +1,5 @@
 <?php
-require_once('connect.php');
+require_once('koeneksi.php');
 
 if (isset($_POST['idproduk'])) {
     $idproduk = $_POST['idproduk'];
